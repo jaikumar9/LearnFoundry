@@ -16,4 +16,10 @@ function testHelloWorld() public view {
     assertEq(helloWorld.greeting(), "HelloWorld");
 
 }
+
+function testcheckString(string memory x) public  {
+    helloWorld.setGreet(x);
+        assertEq(helloWorld.greeting(),x);
+}
+
 }
