@@ -10,3 +10,6 @@
 [submodule "Remappings/lib/forge-std"]
 	path = Remappings/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "Remappings/lib/solmate"]
+	path = Remappings/lib/solmate
+	url = https://github.com/rari-capital/solmate

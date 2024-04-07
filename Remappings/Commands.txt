@@ -1,0 +1,6 @@
+forge build = "Compile All Contracts"
+forge remappings = "To See installed Packages "
+forge update lib/solmate - "To update the Package"
+forge remove solmate - "To remove Package"
+
+npm i @openzeppelin/contracts - "To install Openzeppeline packages contracts"
