@@ -13,3 +13,6 @@
 [submodule "Remappings/lib/solmate"]
 	path = Remappings/lib/solmate
 	url = https://github.com/rari-capital/solmate
+[submodule "autoFormatCode/lib/forge-std"]
+	path = autoFormatCode/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
