@@ -19,3 +19,6 @@
 [submodule "ConsoleLog/lib/forge-std"]
 	path = ConsoleLog/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "Authentication/lib/forge-std"]
+	path = Authentication/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
