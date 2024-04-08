@@ -1,0 +1,8 @@
+forge test --match-path test/counter.t.sol -vv  = "To console.log in the terminal"
+console.logInt = "to console the Integer value (-1)"
+
+
+Note: At the time of contract Deployment remove the "import "forge-std/console.sol";"
+and console.log from the contract.
+
+Note2: You can Console many things you can check out - lib>forge-std>console.sol
