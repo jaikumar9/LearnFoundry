@@ -1,0 +1,13 @@
+vm.expectEmit
+
+expectEmit in Foundry
+expectEmit is a cheat code (testing utility) provided by Foundry that allows you to assert that a specific event will be emitted during the next call within your test. It essentially tells the testing framework to expect a particular event with certain characteristics.
+
+Key Points:
+Usage: It's typically used inside a test function to verify that a specific function call or transaction within your test results in the emission of the expected event.
+Arguments: It takes several arguments to specify the details of the expected event:
+bool checkTopic1: Whether to check the first event topic (usually the event signature)
+bool checkTopic2: Whether to check the second event topic (optional)
+bool checkTopic3: Whether to check the third event topic (optional)
+bool checkData: Whether to check the event data
+address emitter (optional): The address of the expected contract emitting the event (useful when testing interactions with external contracts)

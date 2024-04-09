@@ -1,0 +1,8 @@
+vm.expectRevert
+require error message
+custom error
+label assertions
+
+
+To use expectRevert with a custom error type without parameters, use its selector.
+vm.expectRevert(CustomError.selector);
