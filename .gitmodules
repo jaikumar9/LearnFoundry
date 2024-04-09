@@ -22,3 +22,6 @@
 [submodule "Authentication/lib/forge-std"]
 	path = Authentication/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "TestError/lib/forge-std"]
+	path = TestError/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
