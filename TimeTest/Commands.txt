@@ -1,0 +1,4 @@
+vm.warp = set block.timestamp to future timestamp 
+vm.roll = set block number 
+skip = increment current timestamp
+rewind = decrement current timestamps
