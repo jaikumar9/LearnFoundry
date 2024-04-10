@@ -39,12 +39,29 @@ contract EventTest is Test {
         eventT.transfer(address(this), address(0x1233), 1008567);
     }
 
-    function testEmitManyTransferEvent() public {
-        // 1. Tell foundry which data to check 
-        // 2. Emit the expected event
-        // 3. Call the function that emits the event
-        vm.expectEmit(true, true, false, true);
-        emit Transfer(address(this),[0x321], 100);
-        eventT.transferForMany(address(this), [0x321], 100);
+      function testEmitManyTransferEvent() public {
+        address[] memory to = new address[](5);
+        to[0] = address(111);
+        to[1] = address(222);
+        to[2] = address(333);
+        to[3] = address(444);
+        to[4] = address(555);
+
+        uint256[] memory amounts = new uint256[](5);
+        amounts[0] = 1;
+        amounts[1] = 2;
+        amounts[2] = 3;
+        amounts[3] = 45;
+        amounts[4] = 6;
+
+        for (uint256 i = 0; i < to.length; i++) {
+            // 1. Tell Foundry which data to check
+            vm.expectEmit(true, true, false, true);
+            // 2. Emit the expected event
+            emit Transfer(address(this), to[i], amounts[i]);
+        }
+
+        // 3. Call the function that should emit the event
+        eventT.transferMany(address(this), to, amounts);
     }
 }
