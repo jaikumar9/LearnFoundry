@@ -28,3 +28,6 @@
 [submodule "EventTest/lib/forge-std"]
 	path = EventTest/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "TimeTest/lib/forge-std"]
+	path = TimeTest/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
