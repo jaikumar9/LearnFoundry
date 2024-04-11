@@ -31,3 +31,6 @@
 [submodule "TimeTest/lib/forge-std"]
 	path = TimeTest/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "SendETH/lib/forge-std"]
+	path = SendETH/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
