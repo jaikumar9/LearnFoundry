@@ -1,0 +1,9 @@
+ vm.addr(PrivateKey) = Getting Public Key from private key.
+
+ keccak256(message) = Getting Hash of Data.
+
+ vm.sign(privateKey, messageHash) = Sign the Transaction
+
+ ecrecover(messageHash, v, r, s) = Getting the Signer Which is Equal to the Public Key.
+
+ assertTrue(signer != publicKey) = Check the Conditions are True.
