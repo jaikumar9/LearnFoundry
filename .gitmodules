@@ -34,3 +34,6 @@
 [submodule "SendETH/lib/forge-std"]
 	path = SendETH/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "Signature/lib/forge-std"]
+	path = Signature/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
