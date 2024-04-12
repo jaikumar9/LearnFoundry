@@ -37,3 +37,6 @@
 [submodule "Signature/lib/forge-std"]
 	path = Signature/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "GasLess/lib/forge-std"]
+	path = GasLess/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
