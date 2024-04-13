@@ -27,8 +27,6 @@ contract GasLessTokenTransferTest is Test {
 
     function testValidSign() public {
         // perpare permit message
-
-        // check token balances
         uint deadline = block.timestamp + 60;
 
         bytes32 PermitHash = _getPermitHash(
@@ -45,15 +43,9 @@ contract GasLessTokenTransferTest is Test {
         );
 
         // Execute send
-          gasless.send(
-        address(token),
-        sender,
-        receiver,
-        AMOUNT,
-        FEE,
-        deadline,
-        v,r,s);
+        gasless.send(address(token),sender,receiver,AMOUNT,FEE,deadline,v,r,s);
 
+        // check token balances
         assertEq(token.balanceOf(sender), 0, "Sender Balance");
         assertEq(token.balanceOf(receiver), AMOUNT, "Receivers Contract Balance Balance");
         assertEq(token.balanceOf(address(this)), FEE, "Test contract Gets Fees Balance");
