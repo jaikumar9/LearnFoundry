@@ -1,0 +1,2 @@
+forge clean - To clear the cached build artifacts.
+forge build - To compile your project.
