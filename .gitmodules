@@ -52,3 +52,6 @@
 [submodule "Mint1MDaiMainnet/lib/forge-std"]
 	path = Mint1MDaiMainnet/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "FuzzTest/lib/forge-std"]
+	path = FuzzTest/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
