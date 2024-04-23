@@ -1,0 +1,41 @@
+bound
+
+function bound(uint256 x, uint256 min, uint256 max) public returns (uint256 result);
+
+
+A mathematical function for wrapping inputs of fuzz tests into a certain range.
+
+You can use it instead of the assume cheatcode to get better performance in some cases. Read more here.
+
+Examples
+input = bound(input, 99, 101);
+Returns 99 for input 0.
+Returns 100 for input 1.
+Returns 101 for input 2.
+Returns 99 for input 3.
+And so on.
+
+...........................................
+
+assume
+
+function assume(bool) external;
+
+If the boolean expression evaluates to false, the fuzzer will discard the current fuzz inputs and start a new fuzz run.
+
+The assume cheatcode should mainly be used for very narrow checks. Broad checks will slow down tests as it will take a while to find valid values, and the test may fail if you hit the max number of rejects.
+
+You can configure the rejection thresholds by setting fuzz.max_test_rejects in your foundry.toml file.
+
+For broad checks, such as ensuring a uint256 falls within a certain range, you can bound your input with the modulo operator or Forge Standard’s bound method.
+
+More information on filtering via assume can be found here.
+
+Examples
+
+// Good example of using assume
+function testSomething(uint256 a) public {
+    vm.assume(a != 1);
+    require(a != 1);
+    // [PASS]
+}
