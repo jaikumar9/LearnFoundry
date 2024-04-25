@@ -1,0 +1,7 @@
+Invariant testing in Foundry is like playing with a toy in a weird way to see if it breaks.
+
+You have a toy (your smart contract).
+The toy has certain rules to follow (like some parts can't come off).
+You mess with the toy in strange ways (call functions randomly) to see if it breaks the rules (violates the invariants).
+
+This way, you find if the toy (contract) can handle unexpected situations and isn't easily broken.
