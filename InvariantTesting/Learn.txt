@@ -5,3 +5,8 @@ The toy has certain rules to follow (like some parts can't come off).
 You mess with the toy in strange ways (call functions randomly) to see if it breaks the rules (violates the invariants).
 
 This way, you find if the toy (contract) can handle unexpected situations and isn't easily broken.
+
+
+// - target contract
+
+ targetContract(address(handler)); // Test all public function of handler Contract.
