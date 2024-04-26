@@ -10,3 +10,16 @@ This way, you find if the toy (contract) can handle unexpected situations and is
 // - target contract
 
  targetContract(address(handler)); // Test all public function of handler Contract.
+
+
+ // - target selector
+
+  bytes4 [] memory selectors = new bytes4[](3);
+        selectors[0] = handler.sendToFallback.selector;
+        selectors[1] = handler.deposit.selector;
+        selectors[2] = handler.withdraw.selector;
+        // selectors[3] = handler.fail.selector;
+
+        targetSelector(
+            FuzzSelector({addr: address(handler), selectors: selectors})
+        );
