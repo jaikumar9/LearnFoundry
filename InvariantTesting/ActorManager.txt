@@ -1,0 +1,25 @@
+ Actor management in this context refers to the ability of a smart contract to simulate different users or entities interacting with it. Here's a simplified breakdown:
+
+Purpose: The goal is to test how the smart contract behaves when different users or actors interact with it. 
+By managing multiple actors within the contract, developers can simulate various scenarios and test the contract's functionality thoroughly.
+
+Actor Array: The contract maintains an array called actors, which stores the addresses of different actors or users.
+
+Modifier: The useActor modifier is created to facilitate actor selection. 
+It takes an actorIndexSeed as input, which is used to randomly select an actor from the actors array.
+
+Prank Execution: Before executing the function, the modifier starts a prank with the selected actor. 
+This step essentially switches the context of the function execution to mimic the selected actor's behavior.
+
+Function Execution: Once the prank is started, the function associated with the modifier is executed.
+Inside this function, actions are performed as if they were initiated by the selected actor.
+
+Cleanup: After the function execution, the prank is stopped, restoring the original context of the contract.
+
+Benefits:
+Allows testing of various scenarios with different users without deploying multiple instances of the contract.
+Enables comprehensive testing of contract functionality under different user contexts.
+Facilitates more robust and reliable smart contract development by identifying and addressing potential issues early in the development process.
+
+In essence, actor management provides a way to simulate real-world interactions with the smart contract, 
+enhancing testing and ensuring its reliability and security.
