@@ -1,0 +1,8 @@
+FFI = Foreginal Function Interface
+
+commands ->
+cat ffi_test.txt
+
+Testing command ->
+forge test --match-path test/FFI.t.sol --ffi -vvv
+

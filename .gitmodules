@@ -58,3 +58,6 @@
 [submodule "InvariantTesting/lib/forge-std"]
 	path = InvariantTesting/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "FFI/lib/forge-std"]
+	path = FFI/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
