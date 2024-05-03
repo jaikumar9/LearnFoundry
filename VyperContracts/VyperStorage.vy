@@ -12,5 +12,6 @@ def store(_val: uint256):
 
 
 @external
+@view
 def get() -> uint256:
     return self.val
