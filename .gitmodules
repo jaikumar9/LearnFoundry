@@ -67,3 +67,6 @@
 [submodule "VyperContracts/lib/forge-std"]
 	path = VyperContracts/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "deployContract/lib/forge-std"]
+	path = deployContract/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
