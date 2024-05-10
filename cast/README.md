@@ -1,66 +1,40 @@
-## Foundry
+# Cast example
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
-
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
+Import, list and remove wallet
 
 ```shell
-$ forge build
+# Import private key
+ACCOUNT=jaiKaWallet
+cast wallet import $ACCOUNT --private-key $DEV_PRIVATE_KEY
+
+# List wallets
+cast wallet list
+
+# Wallet saved to ~/.foundry/keystores
+ls ~/.foundry/keystores/
+
+# Remove wallet
+rm -rf ~/.foundry/keystores/$ACCOUNT
 ```
 
-### Test
+Send transaction and query contract
 
 ```shell
-$ forge test
-```
+DST=0x3aaee3149aCFD9d0e536CA7C1526cB010fa88Cdd
+FUNC_SIG="set(uint256)"
+ARGS="777"
+RPC=https://eth-goerli.g.alchemy.com/v2/y-OzRlSG33yMwy4IfvVD3WlUByo0K0Lq
 
-### Format
+# Send tx
+cast send --account $ACCOUNT --rpc-url $RPC $DST $FUNC_SIG $ARGS
 
-```shell
-$ forge fmt
-```
+# Query smart contract
+cast call --rpc-url $RPC $DST "val()(uint256)"
 
-### Gas Snapshots
 
-```shell
-$ forge snapshot
-```
+.env contains =>
 
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+SEPOLIA_RPC_URL=
+DEV_PRIVATE_KEY=
+ETHERSCAN_API_KEY=
 ```
